@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>0FluffPass | Client-Side Password Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="generator-app">
+
+        <h1>0FluffPass 🔑</h1>
+        <p class="subtitle">Zero-dependency, cryptographic generation.</p>
+
+        <div id="output-area">
+            <span id="password-display">Click 'Generate' to begin</span>
+            <button id="copy-button" aria-label="Copy password to clipboard">Copy</button>
+        </div>
+        
+        <div id="controls">
+
+            <div class="control-group">
+                <label for="length-slider">Password Length:</label>
+                <input type="range" id="length-slider" min="8" max="64" value="16">
+                <span id="length-value">16</span>
+            </div>
+
+            <div class="control-group checkboxes">
+                <label><input type="checkbox" id="include-uppercase" checked> Uppercase (A-Z)</label>
+                <label><input type="checkbox" id="include-lowercase" checked> Lowercase (a-z)</label>
+                <label><input type="checkbox" id="include-numbers" checked> Numbers (0-9)</label>
+                <label><input type="checkbox" id="include-symbols"> Symbols (!@#$)</label>
+            </div>
+
+            <button id="generate-button">Generate Password</button>
+
+        </div> 
+        </div>
+
+    <script src="generator.js"></script>
+</body>
+</html>
